@@ -1,6 +1,67 @@
-import './App.css'
+import { useState } from "react"
 
 export default function App() {
+  const [lang, setLang] = useState("DE")
+const t = {
+  de: {
+    home: 'Startseite',
+    about: 'Über uns',
+    services: 'Leistungen',
+    projects: 'Projekte',
+    reviews: 'Bewertungen',
+    contact: 'Kontakt',
+
+    heroSubtitle: 'IHR PARTNER FÜR HOCHWERTIGEN INNENAUSBAU',
+
+    heroTitle: 'Qualität, Präzision und Zuverlässigkeit',
+
+    heroText:
+      'Interdienst steht für professionellen Innenausbau und Wohnungsrenovierung auf höchstem Niveau. Wir verwandeln Ihre Räume in echte Wohlfühlorte.',
+
+    btn1: 'Termin vereinbaren',
+    btn2: 'WhatsApp schreiben',
+
+    service1: 'Innenausbau',
+    service2: 'Malerarbeiten',
+    service3: 'Fliesenverlegung',
+    service4: 'Wohnungsrenovierung',
+
+    serviceText1: 'Individuelle Raumgestaltung',
+    serviceText2: 'Professionelle Oberflächen',
+    serviceText3: 'Bäder, Küchen & mehr',
+    serviceText4: 'Komplette Renovierungen',
+  },
+
+  en: {
+    home: 'Home',
+    about: 'About us',
+    services: 'Services',
+    projects: 'Projects',
+    reviews: 'Reviews',
+    contact: 'Contact',
+
+    heroSubtitle: 'YOUR PARTNER FOR PREMIUM INTERIOR CONSTRUCTION',
+
+    heroTitle: 'Quality, Precision and Reliability',
+
+    heroText:
+      'Interdienst stands for professional interior construction and apartment renovation at the highest level. We transform your spaces into places of comfort.',
+
+    btn1: 'Book appointment',
+    btn2: 'Write on WhatsApp',
+
+    service1: 'Interior Construction',
+    service2: 'Painting Works',
+    service3: 'Tile Installation',
+    service4: 'Apartment Renovation',
+
+    serviceText1: 'Individual room design',
+    serviceText2: 'Professional surfaces',
+    serviceText3: 'Bathrooms, kitchens & more',
+    serviceText4: 'Complete renovations',
+  }
+}
+const text = t[lang]
   return (
     <div className="app">
 
@@ -10,19 +71,31 @@ export default function App() {
         </div>
 
         <nav className="nav">
-          <a href="#">Startseite</a>
-          <a href="#">Über uns</a>
-          <a href="#">Leistungen</a>
-          <a href="#">Projekte</a>
-          <a href="#">Bewertungen</a>
-          <a href="#">Kontakt</a>
+          <a href="#">{text.home}</a>
+          <a href="#">{text.about}</a>
+          <a href="#">{text.services}</a>
+          <a href="#">{text.projects}</a>
+          <a href="#">{text.reviews}</a>
+          <a href="#">{text.contact}</a>
         </nav>
 
-        <div className="header-right">
-          <button className="lang active">DE</button>
-          <button className="lang">EN</button>
+      <div className="lang-switch">
+  <button
+    className={lang === "de" ? "active" : ""}
+    onClick={() => setLang("de")}
+  >
+    DE
+  </button>
 
-          <div className="phone">
+  <button
+    className={lang === "en" ? "active" : ""}
+    onClick={() => setLang("en")}
+  >
+    EN
+  </button>
+
+          <div
+             className="phone">
             +49 1577 1506638
           </div>
         </div>
@@ -43,14 +116,13 @@ export default function App() {
           </h1>
 
           <p>
-            Interdienst steht für professionellen Innenausbau
-            und Wohnungsrenovierung auf höchstem Niveau.
-            Wir verwandeln Ihre Räume in echte Wohlfühlorte.
+            {text.heroText}
+        
           </p>
 
           <div className="hero-buttons">
             <button className="primary-btn">
-              Termin vereinbaren
+              {text.btn1}
             </button>
 
             <button className="secondary-btn">

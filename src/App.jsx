@@ -1,8 +1,8 @@
 import { useState } from "react"
 
 export default function App() {
-  const [lang, setLang] = useState("DE")
-const t = {
+  const [lang, setLang] = useState("de")
+  const t = {
   de: {
     home: 'Startseite',
     about: 'Über uns',
@@ -22,7 +22,7 @@ const t = {
     btn2: 'WhatsApp schreiben',
 
     service1: 'Innenausbau',
-    service2: 'Malerarbeiten',
+    service2: 'Trockenbau & Malerarbeiten',
     service3: 'Fliesenverlegung',
     service4: 'Wohnungsrenovierung',
 
@@ -60,8 +60,8 @@ const t = {
     serviceText3: 'Bathrooms, kitchens & more',
     serviceText4: 'Complete renovations',
   }
-}
-const text = t[lang]
+  }
+  const text = t[lang]
   return (
     <div className="app">
 
@@ -126,7 +126,7 @@ const text = t[lang]
             </button>
 
             <button className="secondary-btn">
-              WhatsApp schreiben
+              {text.btn2}
             </button>
           </div>
 
@@ -151,25 +151,37 @@ const text = t[lang]
       <section className="services">
 
         <div className="service-item">
-          <h3>Innenausbau</h3>
-          <p>Individuelle Raumgestaltung</p>
+          <h3>{text.service1}</h3>
+          <p>{text.serviceText1}</p>
         </div>
 
         <div className="service-item">
-          <h3>Malerarbeiten</h3>
-          <p>Professionelle Oberflächen</p>
+          <h3>{text.service2}</h3>
+          <p>{text.serviceText2}</p>
         </div>
 
         <div className="service-item">
-          <h3>Fliesenverlegung</h3>
-          <p>Bäder, Küchen & mehr</p>
+          <h3>{text.service3}</h3>
+          <p>{text.serviceText3}</p>
         </div>
 
         <div className="service-item">
-          <h3>Wohnungsrenovierung</h3>
-          <p>Komplette Renovierungen</p>
+          <h3>{text.service4}</h3>
+          <p>{text.serviceText4}</p>
         </div>
 
+      </section>
+
+      <section className="reviews">
+        <div className="review-card">
+          <h3>★★★★★</h3>
+
+          <p>
+            Sehr professionelle Arbeit und perfekte Qualität.
+          </p>
+
+          <span>— Michael K.</span>
+        </div>
       </section>
 
     </div>

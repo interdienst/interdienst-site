@@ -25,12 +25,12 @@ export default function App() {
       btn2: 'WhatsApp schreiben',
 
       service1: 'Innenausbau',
-      service2: 'Malerarbeiten',
+      service2: 'Trockenbau & Malerarbeiten',
       service3: 'Fliesenverlegung',
       service4: 'Wohnungsrenovierung',
 
       serviceText1: 'Individuelle Raumgestaltung',
-      serviceText2: 'Professionelle Malerarbeiten',
+      serviceText2: 'Spiegelglatte Oberflächen',
       serviceText3: 'Präzise Fliesenarbeiten',
       serviceText4: 'Komplette Renovierungen',
 
@@ -200,11 +200,12 @@ export default function App() {
         </div>
 
       </section>
-
+  
       <section
         className="services-bar"
         id="services"
       >
+        <div className="services-grid">
 
         <div className="service-item">
           <h3>{text.service1}</h3>
@@ -226,6 +227,7 @@ export default function App() {
           <p>{text.serviceText4}</p>
         </div>
 
+        </div>
       </section>
 
       <section className="info-section">
@@ -275,16 +277,61 @@ export default function App() {
 
         </div>
 
-        <div className="location">
+        <section className="location-section">
 
-          <h2>{text.location}</h2>
+  <div className="location-container">
 
-          <iframe
-            title="map"
-            src="https://maps.google.com/maps?q=Elsdorf&t=&z=13&ie=UTF8&iwloc=&output=embed"
-          ></iframe>
+    <div className="location-info">
 
+      <span className="section-subtitle">
+        Kontakt & Standort
+      </span>
+
+      <h2>Unser Standort</h2>
+
+      <p>
+        Wir sind Ihr zuverlässiger Partner für Innenausbau,
+        Renovierung, Fliesenverlegung und Malerarbeiten.
+      </p>
+
+      <div className="location-details">
+
+        <div className="detail-item">
+          <strong>Adresse:</strong>
+          <span>Elsdorf, Deutschland</span>
         </div>
+
+        <div className="detail-item">
+          <strong>Telefon:</strong>
+          <span>+49 1577 1506638</span>
+        </div>
+
+        <div className="detail-item">
+          <strong>E-Mail:</strong>
+          <span>interdienst@gmail.com</span>
+        </div>
+
+      </div>
+
+      <a href="#contact" className="location-btn">
+        Termin vereinbaren
+      </a>
+
+    </div>
+
+    <div className="location-map">
+
+      <iframe
+        title="map"
+        src="https://maps.google.com/maps?q=Elsdorf&t=&z=13&ie=UTF8&iwloc=&output=embed"
+        loading="lazy"
+      ></iframe>
+
+    </div>
+
+  </div>
+
+      </section>
 
       </section>
 
@@ -294,7 +341,7 @@ export default function App() {
       >
 
         <div>
-          © 2024 Interdienst Innenausbau
+          © 2015 Interdienst Innenausbau
         </div>
 
         <div className="footer-links">
@@ -303,7 +350,7 @@ export default function App() {
         </div>
 
         <div>
-          info@interdienst-innenausbau.de
+          interdienst@gmail.com
         </div>
 
       </footer>

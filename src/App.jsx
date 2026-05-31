@@ -25,12 +25,13 @@ export default function App() {
       btn2: 'WhatsApp schreiben',
 
       service1: 'Innenausbau',
-      service2: 'Trockenbau & Malerarbeiten',
+      service2: 'Trockenbau ',
+    
       service3: 'Fliesenverlegung',
       service4: 'Wohnungsrenovierung',
 
       serviceText1: 'Individuelle Raumgestaltung',
-      serviceText2: 'Spiegelglatte Oberflächen',
+      serviceText2: 'Spachtel- und Oberflächenarbeiten',
       serviceText3: 'Präzise Fliesenarbeiten',
       serviceText4: 'Komplette Renovierungen',
 
@@ -75,12 +76,12 @@ export default function App() {
       btn2: 'Write on WhatsApp',
 
       service1: 'Interior Construction',
-      service2: 'Painting Works',
+      service2: 'Dry wall installation',
       service3: 'Tile Installation',
       service4: 'Apartment Renovation',
 
       serviceText1: 'Individual room design',
-      serviceText2: 'Professional painting works',
+      serviceText2: 'Professional dry wall installation',
       serviceText3: 'Precise tile installation',
       serviceText4: 'Complete renovations',
 
@@ -192,12 +193,11 @@ export default function App() {
 
           <img src="/hero.jpg" alt="hero" />
 
-          <div className="hero-badge">
-            <strong>Saubere Arbeit</strong>
-            <span>Termintreu & zuverlässig</span>
-          </div>
-
-        </div>
+           <div className="quality-badge">
+    <span>Saubere Arbeit</span>
+    <small>Termintreu & zuverlässig</small>
+  </div>
+</div>
 
       </section>
   
@@ -250,9 +250,17 @@ export default function App() {
           className="reviews"
           id="reviews"
         >
-
-          <h2>{text.reviews}</h2>
-
+          <div className="reviews-header">
+            <h2>{text.reviews}</h2>
+            <a
+              href="https://www.my-hammer.de/auftragnehmer/interdienst/bewertungen"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="reviews-link"
+            >
+              Alle Bewertungen ansehen →
+            </a>
+          </div>
           <div className="reviews-grid">
 
             <div className="review-card">
@@ -276,12 +284,8 @@ export default function App() {
           </div>
 
         </div>
-
-        <section className="location-section">
-
-  <div className="location-container">
-
-    <div className="location-info">
+<div className="location">
+  
 
       <span className="section-subtitle">
         Kontakt & Standort
@@ -289,10 +293,7 @@ export default function App() {
 
       <h2>Unser Standort</h2>
 
-      <p>
-        Wir sind Ihr zuverlässiger Partner für Innenausbau,
-        Renovierung, Fliesenverlegung und Malerarbeiten.
-      </p>
+    
 
       <div className="location-details">
 
@@ -302,7 +303,7 @@ export default function App() {
         </div>
 
         <div className="detail-item">
-          <strong>Telefon:</strong>
+          <strong>WhatsApp:</strong>
           <span>+49 1577 1506638</span>
         </div>
 
@@ -313,45 +314,33 @@ export default function App() {
 
       </div>
 
-      <a href="#contact" className="location-btn">
-        Termin vereinbaren
-      </a>
-
-    </div>
+  
+    
 
     <div className="location-map">
-
       <iframe
-        title="map"
-        src="https://maps.google.com/maps?q=Elsdorf&t=&z=13&ie=UTF8&iwloc=&output=embed"
+        title="Standort"
+        src="https://maps.google.com/maps?q=Elsdorf&t=&z=13&ie=UTF8&iwloc=&output=embed&hl=de"
         loading="lazy"
       ></iframe>
-
     </div>
-
+  </div>
+   </section>
+ <footer
+        className="footer">
+  <div className="footer-left">
+    © 2015 Interdienst Innenausbau
   </div>
 
-      </section>
+  <div className="footer-center">
+    <a href="#">Impressum</a>
+    <a href="#">Datenschutz</a>
+  </div>
 
-      </section>
+  <div className="footer-right">
+    ✉ interdienst@gmail.com
+  </div>
 
-      <footer
-        className="footer"
-        id="contact"
-      >
-
-        <div>
-          © 2015 Interdienst Innenausbau
-        </div>
-
-        <div className="footer-links">
-          <a href="#">Impressum</a>
-          <a href="#">Datenschutz</a>
-        </div>
-
-        <div>
-          interdienst@gmail.com
-        </div>
 
       </footer>
 
@@ -360,9 +349,34 @@ export default function App() {
         href="https://wa.me/4915771506638"
         target="_blank"
       >
-        WhatsApp
-      </a>
-
+       </a>
     </div>
   )
-}
+}<div className="location">
+
+  <h2>Unser Standort</h2>
+
+  <div className="location-content">
+
+    <div className="location-info">
+      <p><strong>Adresse:</strong><br />Elsdorf, Deutschland</p>
+
+      <p><strong>WhatsApp:</strong><br />+49 1577 1506638</p>
+
+      <p><strong>E-Mail:</strong><br />interdienst@gmail.com</p>
+    </div>
+
+    <div className="location-map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2510.9516949288987!2d6.6269!3d50.9194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bf7d4c4c4c4c4d%3A0x4c4c4c4c4c4c4c4c!2sElsdorf%2C%20Germany!5e0!3m2!1sen!2sde!4v1234567890"
+        width="100%"
+        height="400"
+        style={{ border: 0 }}
+        allowFullScreen=""
+        loading="lazy"
+      />
+    </div>
+
+  </div>
+
+</div>
